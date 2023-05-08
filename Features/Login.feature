@@ -1,4 +1,4 @@
-Feature: Find Search text successfully
+Feature: user logged in successfully 
 
 
 @Testing
@@ -9,6 +9,10 @@ Scenario: Login Successfully
 	Then check that new window is opened
 	When enter email and password
 	And Click on next button
+
+
+
+
 
 
 

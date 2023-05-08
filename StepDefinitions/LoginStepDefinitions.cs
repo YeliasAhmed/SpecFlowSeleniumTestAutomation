@@ -8,12 +8,17 @@ namespace SpecFlowSelenium.StepDefinitions
     {
         private IWebDriver driver;
 
+        public LoginStepDefinitions(IWebDriver driver)
+        {
+            this.driver = driver;   
+        }
+
         [Given(@"Open Browser")]
         public void GivenOpenBrowser()
         {
-            driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            //driver = new ChromeDriver();
+            //driver.Manage().Window.Maximize();
+            //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
         }
 
@@ -52,8 +57,10 @@ namespace SpecFlowSelenium.StepDefinitions
         {
             driver.FindElement(By.XPath("//span[normalize-space()='Next']")).Click();
             Thread.Sleep(4000);
-            driver.Close();
+
+            
         }
+        
 
 
 
